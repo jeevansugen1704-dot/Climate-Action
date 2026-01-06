@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Volunteer - Climate Action</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo"><img src="logo.png" height="50" alt="Logo"></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="take-action.html">TAKE ACTION</a></li>
+                    <li><a href="resources.html">RESOURCES</a></li>
+                </ul>
+            </nav>
+            <div style="width: 120px;"></div>
+        </div>
+    </header>
+
+    <main class="volunteer-wrapper">
+        <div class="vol-hero-container">
+            <img src="volunteer-hero.jpg" class="vol-hero-img" alt="Volunteer Hero">
+            <div class="vol-hero-label">VOLUNTEER PAGE</div>
+        </div>
+
+        <section class="vol-form-section">
+            <div class="vol-form-container">
+                <form id="volunteerForm">
+                    <p class="form-title">Your Information</p>
+                    
+                    <div class="form-grid">
+                        <input type="text" placeholder="First Name" required>
+                        <input type="text" placeholder="Gender" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="tel" placeholder="Contact Number" required>
+                    </div>
+
+                    <div class="submit-center">
+                        <button type="submit" class="vol-submit-btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <div class="vol-bottom-container">
+            <img src="volunteer1-team.jpg" class="vol-bottom-img" alt="Volunteer Team">
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>CONTACT US</h4>
+                <p><i class="fas fa-phone-alt"></i> +6017-913 3611</p>
+            </div>
+            <div class="footer-col">
+                <h4>QUIKLINKS</h4>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="take-action.html">TAKE ACTION</a></li>
+                        <li><a href="resources.html">RESOURCES</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>CONNECTED</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-logo">
+                <img src="sdg13-logo.png" width="100" alt="SDG 13">
+            </div>
+        </div>
+    </footer>
+    <div class="copyright-bar">COPYRIGHT @ JEEVASUTHEN A/L SUGENTARAN</div>
+
+    <script>
+        document.getElementById('volunteerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("Thank you for signing up to volunteer! We will contact you soon.");
+            window.location.href = "index.html";
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <script src="script.js"></script>
+</body>
+</html>

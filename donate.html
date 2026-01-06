@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donate - Climate Action</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo"><img src="logo.png" height="50" alt="Logo"></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about US.html">ABOUT US</a></li>
+                    <li><a href="take-action.html">TAKE ACTION</a></li>
+                    <li><a href="resources.html">RESOURCES</a></li>
+                </ul>
+            </nav>
+            <div style="width: 120px;"></div>
+        </div>
+    </header>
+
+    <main class="donate-page-wrapper">
+        <div class="donate-hero-container">
+            <img src="donate-hero.jpg" class="donate-hero-img" alt="Donate Page Hero">
+            <h1 class="donate-hero-title">DONATE PAGE</h1>
+        </div>
+
+        <section class="donate-form-section">
+            <div class="form-content-box">
+                <form id="donationForm">
+                    <div class="input-section">
+                        <label>Your Information</label>
+                        <input type="text" id="userName" placeholder="Name" required>
+                    </div>
+
+                    <div class="amount-section">
+                        <label>Select Amount</label>
+                        <div class="amount-button-grid">
+                            <button type="button" class="amount-option" onclick="selectDonateAmount(10)">RM 10</button>
+                            <button type="button" class="amount-option" onclick="selectDonateAmount(50)">RM 50</button>
+                            <button type="button" class="amount-option" onclick="selectDonateAmount(100)">RM 100</button>
+                            <button type="button" class="amount-option" onclick="selectDonateAmount(200)">RM 200</button>
+                        </div>
+                        
+                        <div class="custom-input-box">
+                            <input type="number" id="displayAmount" placeholder="CUSTOM AMOUNT" min="0" value="0">
+                        </div>
+                    </div>
+
+                    <div class="submit-area">
+                        <button type="submit" class="pay-now-btn">Pay</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>CONTACT US</h4>
+                <p><i class="fas fa-phone-alt"></i> +6017-913 3611</p>
+            </div>
+            <div class="footer-col">
+                <h4>QUIKLINKS</h4>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about us.html">ABOUT US</a></li>
+                    <li><a href="take-action.html">TAKE ACTION</a></li>
+                      <li><a href="resources.html">RESOURCES</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>CONNECTED</h4>
+                <div class="social-icons">
+       <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-logo">
+                <img src="sdg13-logo.png" width="100" alt="SDG 13">
+            </div>
+        </div>
+    </footer>
+    <div class="copyright-bar">COPYRIGHT @ JEEVASUTHEN A/L SUGENTARAN</div>
+
+    <script>
+        // Function to update the number box when a RM button is clicked
+        function selectDonateAmount(amount) {
+            document.getElementById('displayAmount').value = amount;
+        }
+
+        // Logic for the Pay button
+        document.getElementById('donationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const finalValue = document.getElementById('displayAmount').value;
+            const nameValue = document.getElementById('userName').value;
+
+            if (finalValue > 0) {
+                alert("Thank you, " + nameValue + "! Your donation of RM " + finalValue + " has been submitted.");
+            } else {
+                alert("Please enter a donation amount greater than 0.");
+            }
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <script src="script.js"></script>
+</body>
+</html>
