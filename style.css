@@ -1,0 +1,722 @@
+/* General Setup */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f9fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #6da3bd;
+    padding: 10px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul { display: flex; list-style: none; gap: 20px; }
+nav ul li a { color: white; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+nav ul li a.active { background-color: #5b8da5; padding: 8px 12px; border-radius: 3px; }
+
+.donate-btn a {
+    background-color: #1abc9c;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section with Lemon Font and Image */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+}
+
+.hero h1 {
+    font-family: 'Lemon', serif; /* Lemon Font Requirement */
+    font-size: 4.5rem;
+    font-style: italic;
+    color: #000;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 10px;
+    color: #000;
+}
+
+/* Summary Section - Perfect Layout */
+.summary-container {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.summary-header {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.summary-text {
+    text-align: justify;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+.summary-text p {
+    margin-bottom: 20px;
+}
+
+/* 3 Cards Layout */
+.summary-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.card {
+    background: #fff;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 25px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 900;
+    margin: 20px 10px 10px 10px;
+    text-transform: uppercase;
+}
+
+.card p {
+    font-size: 0.85rem;
+    padding: 0 15px;
+    color: #555;
+}
+
+/* Footer Section */
+footer {
+    background-color: #61899d;
+    color: white;
+    padding: 50px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-col h4 { margin-bottom: 20px; font-size: 1rem; font-family: 'Montserrat', sans-serif; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 8px; }
+.footer-col ul li a { color: white; text-decoration: none; font-size: 0.9rem; }
+
+.social-icons { display: flex; gap: 15px; font-size: 1.5rem; }
+.social-icons a { color: white; text-decoration: none; }
+
+.copyright-bar {
+    background-color: #3e6d8d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.8rem;
+}
+/* --- GLOBAL --- */
+.about-container {
+    max-width: 900px; /* Narrower container for better readability */
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.wireframe-section {
+    background-color: transparent;
+    margin-bottom: 60px;
+}
+
+.about-header {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.sub-header {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 1.8rem;
+    margin: 40px 0 20px 0;
+}
+
+.about-container h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* Bullet Lists */
+.bullet-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.bullet-list li {
+    margin-bottom: 12px;
+}
+
+.bullet-list-center {
+    list-style-position: inside;
+    margin-bottom: 20px;
+}
+
+/* --- IMAGE PLACEMENT SYSTEM --- */
+
+/* 1. FULL SCREEN WIDTH IMAGE (HANDS-EARTH) */
+.img-big-fit {
+    width: 100vw;          /* Sets width to 100% of the Viewport Width */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;    /* Centers the image while ignoring container padding */
+    margin-right: -50vw;
+    height: auto;
+    max-height: 600px;     /* Increased height for a "Hero" look */
+    object-fit: cover;
+    border-radius: 0;       /* Removed border radius to make it look seamless on edges */
+    margin-top: 30px;
+    display: block;
+}
+
+/* 2. STACKED PATTERN (SMALL CENTER ON TOP, WIDE BELOW) */
+.img-small-center {
+    display: block;
+    width: 55%;
+    height: auto;
+    margin: 40px auto 5px auto; /* 5px gap below to pull the wide pic up */
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.img-wide-rect {
+    display: block;
+    width: 100%;
+    height: 380px;
+    margin: 0 auto 40px auto; /* Zero top margin to sit under the small pic */
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* 3. FINAL GRID SIDE-BY-SIDE */
+.image-grid-bottom {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.image-grid-bottom img {
+    width: 50%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* --- FOOTER --- */
+footer { background-color: #61899d; color: white; padding: 40px 0; margin-top: 80px; }
+.footer-container { display: flex; justify-content: space-around; max-width: 1200px; margin: 0 auto; }
+.social-icons { display: flex; gap: 15px; font-size: 1.5rem; }
+.social-icons a { color: white; text-decoration: none; }
+.copyright-bar { background-color: #3e6d8d; color: white; text-align: center; padding: 20px; font-size: 0.85rem; font-weight: 600; }
+
+/* --- TAKE ACTION PAGE (WIREFRAME STYLE) --- */
+/* --- TAKE ACTION HEADER BOX --- */
+.action-header-banner {
+    background-color: #00ffd5; /* The bright cyan/green from your wireframe */
+    width: 100%;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-header-banner h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #000; /* Black text as seen in the screenshot */
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Ensure the container doesn't have extra top padding now */
+.action-container {
+    padding-top: 0 !important; 
+}
+.action-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.btn-wrapper {
+    margin: 25px 0;
+}
+
+/* Bright Green Buttons from your Wireframe */
+.main-action-btn {
+    background-color: #1abc9c;
+    color: white;
+    padding: 12px 60px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1rem;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.main-action-btn:hover {
+    background-color: #16a085;
+}
+
+.text-block {
+    text-align: left;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.bullet-list-simple {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.bullet-list-simple li {
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+
+/* Middle Image with Blue Border like Wireframe */
+.img-middle-bordered {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    margin: 30px auto;
+    display: block;
+}
+/* --- RESOURCES PAGE STYLING --- */
+
+.resources-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #f4fbfc; /* Light blue tint from screenshot */
+    padding-bottom: 50px;
+}
+
+/* --- UPDATED RESOURCES FULL-WIDTH BANNER --- */
+.page-banner {
+    background-color: #00ffd5; /* Bright cyan banner */
+    width: 100vw;              /* Forces banner to 100% of the screen width */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;        /* Centers it back after shifting left */
+    margin-right: -50vw;       /* Centers it back after shifting right */
+    padding: 20px 0;           /* Top and bottom spacing */
+    text-align: center;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-banner h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;         /* Slightly larger for full-width look */
+    font-weight: 900;
+    color: #000;
+    letter-spacing: 2px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* Add this to the container to prevent a tiny side-scroll issue */
+body {
+    overflow-x: hidden;
+}
+
+.resource-section {
+    padding: 0 40px;
+    margin-bottom: 60px;
+}
+
+.resource-heading {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+/* NEW: Space for the introductory text in Infographics and Reports */
+.resource-section p strong {
+    display: block;
+    margin-bottom: 40px; /* Increased space before the lists start */
+}
+
+/* Flex layout for first section */
+.article-intro-flex {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.article-text { flex: 1.5; }
+.article-img { flex: 1; }
+
+.article-img img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Article List items */
+.article-item {
+    margin-bottom: 30px;
+}
+
+.article-item h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.article-item p {
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* Full width infographic image */
+.img-full-resource {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+/* Download Links */
+.download-link {
+    color: #3498db;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.download-link:hover {
+    text-decoration: underline;
+}
+
+.report-item {
+    margin-bottom: 35px;
+}
+/* --- DONATE PAGE FULL STYLES --- */
+
+/* Hero Section */
+.donate-hero-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+/* --- DONATE HERO IMAGE (EXACT DIMENSIONS) --- */
+.donate-hero-container {
+    position: relative;
+    width: 1440px;      /* Exact width requested */
+    height: 868px;      /* Exact height requested */
+    margin: 0 auto;     /* Centers the large image on the screen */
+    overflow: hidden;   /* Ensures no parts bleed out */
+}
+
+.donate-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Maintains image aspect ratio without stretching */
+    display: block;
+}
+
+/* Position the "DONATE PAGE" text correctly over the 1440x868 area */
+.donate-hero-title {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: white;
+    text-shadow: 2px 2px 15px rgba(0,0,0,0.6);
+    z-index: 2;
+}
+
+.donate-hero-title {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: white;
+    text-shadow: 2px 2px 15px rgba(0,0,0,0.6);
+}
+
+/* Form Section with Image Background */
+.donate-form-section {
+    background-image: url('blue-bg.jpg'); /* Replace with your actual blue image file */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+    padding: 80px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* Dark blue overlay to match wireframe */
+.donate-form-section::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 50, 150, 0.6); 
+    z-index: 1;
+}
+
+.form-content-box {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 700px;
+    padding: 0 20px;
+    color: white;
+}
+
+.input-section label, .amount-section label {
+    display: block;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.input-section input, .custom-input-box input {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    margin-bottom: 40px;
+}
+
+/* Amount Buttons */
+.amount-button-grid {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.amount-option {
+    flex: 1;
+    background: white;
+    color: black;
+    border: none;
+    padding: 15px 0;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.amount-option:hover {
+    background-color: #1abc9c;
+    color: white;
+}
+
+/* Pay Button */
+.submit-area {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pay-now-btn {
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    padding: 15px 80px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    border-radius: 50px; /* Pill shape */
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pay-now-btn:hover {
+    background-color: #16a085;
+    transform: scale(1.05);
+}
+/* --- VOLUNTEER PAGE STYLES --- */
+
+.volunteer-wrapper {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* 1st Image: 1454 x 970 */
+.vol-hero-container {
+    position: relative;
+    width: 1454px;
+    height: 970px;
+    margin: 0 auto;
+}
+
+.vol-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vol-hero-label {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    background-color: #34495e; /* Dark slate blue from wireframe */
+    color: white;
+    padding: 10px 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 1.8rem;
+    border-radius: 8px;
+}
+
+/* Form Section: Background Image 1500 x 844 */
+.vol-form-section {
+    width: 1500px;
+    height: 844px;
+    margin: 0 auto;
+    background-image: url('blue-bg-form.jpg'); /* Your 1500x844 image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Optional Overlay to match the blue tint in your screenshot */
+.vol-form-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 50, 150, 0.4); 
+}
+
+.vol-form-container {
+    position: relative;
+    z-index: 2;
+    width: 80%;
+    max-width: 900px;
+    color: white;
+}
+
+.form-title {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-grid input {
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+}
+
+.submit-center {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.vol-submit-btn {
+    background-color: #1abc9c; /* Bright green from wireframe */
+    color: white;
+    border: none;
+    padding: 12px 60px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.vol-submit-btn:hover {
+    background-color: #16a085;
+    transform: scale(1.05);
+}
+
+/* 3rd Image: 1640 x 605 */
+.vol-bottom-container {
+    width: 1640px;
+    height: 605px;
+    margin: 0 auto;
+}
+
+.vol-bottom-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
